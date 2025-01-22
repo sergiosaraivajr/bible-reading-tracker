@@ -2,7 +2,7 @@
 
 Este projeto é uma aplicação web para rastrear o progresso da leitura da Bíblia, permitindo que o usuário registre os capítulos lidos, veja o progresso total e salve os dados localmente.
 
----
+----------------------------------------------------------------
 
 ## 🚀 Funcionalidades  
 - Exibir todos os livros da Bíblia com o número total de capítulos.  
@@ -11,14 +11,14 @@ Este projeto é uma aplicação web para rastrear o progresso da leitura da Bíb
 - Possibilidade de redefinir o progresso.  
 - Dados salvos no `localStorage`, garantindo que não sejam perdidos ao recarregar a página.  
 
----
+---------------------------------------------------------------
 
 ## 🛠️ Tecnologias Utilizadas  
 - **React**: Biblioteca JavaScript para construção de interfaces.  
 - **Vite**: Ferramenta para inicialização rápida de projetos React.  
 - **CSS**: Para estilização da aplicação.  
 
----
+---------------------------------------------------------------
 
 ## 📂 Estrutura de Arquivos  
 ├── public │
@@ -34,7 +34,7 @@ Este projeto é uma aplicação web para rastrear o progresso da leitura da Bíb
 ├── vite.config.js
 
 
----
+---------------------------------------------------------------
 
 ## 🌟 Como Usar  
 
@@ -52,3 +52,30 @@ npm install
 
 Inicie o servidor de desenvolvimento:
 npm run dev
+
+-----------------------------------------------------------------
+
+💡 Sugestões Futuras
+Salvar progresso na nuvem para sincronização entre dispositivos.
+Adicionar modo claro/escuro.
+Filtros e buscas por livros específicos.
+Notificações para lembrar o usuário de continuar a leitura.
+
+-----------------------------------------------------------------
+
+📄 Licença
+Este projeto é de código aberto e está licenciado sob os termos da MIT License.
+
+-----------------------------------------------------------------
+
+🤝 Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o projeto.
+
+----------------------------------------------------------------
+
+📧 Contato
+Se tiver dúvidas ou sugestões, entre em contato:
+
+Nome: Sérgio Saraiva
+Email: sergiosaraivajr01@gmail.com
+
