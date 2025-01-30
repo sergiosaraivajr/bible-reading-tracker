@@ -57,6 +57,37 @@ const BibleReadingTracker = () => {
 
   const percentageRead = ((totalChaptersRead / totalChapters) * 100).toFixed(2);
 
+  //salvar progresso no server
+  const sendProgressToServer = async () => {
+    const userName = prompt("Digite seu nome para salvar o progresso:"); // Solicita o nome do usuário
+    if (!userName) return;
+
+    const progressData = {
+      userId: "unique-user-id", // Você pode gerar um ID único para cada usuário
+      userName,
+      totalChaptersRead,
+      totalChapters,
+      percentageRead,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/progress/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(progressData),
+      });
+
+      if (response.ok) {
+        alert("Progresso salvo com sucesso!");
+      } else {
+        alert("Erro ao salvar o progresso.");
+      }
+    } catch (err) {
+      console.error("Erro:", err);
+      alert("Erro ao conectar ao servidor.");
+    }
+  };
+
   return (
     <div className="tracker">
       <h1>Progresso da Leitura Bíblica</h1>
@@ -68,9 +99,14 @@ const BibleReadingTracker = () => {
         Total do Progresso: {totalChaptersRead} / {totalChapters} capítulos (
         {percentageRead}%)
       </h4>
-      <button className="reset-button" onClick={resetProgress}>
-        Reiniciar Progresso
-      </button>
+      <div className="buttons-container">
+        <button className="reset-button" onClick={resetProgress}>
+          Reiniciar Progresso
+        </button>
+        <button className="save-button" onClick={sendProgressToServer}>
+          Salvar Progresso
+        </button>
+      </div>
       <div className="books-container">
         {bibleBooks.map((book, index) => (
           <BookCard

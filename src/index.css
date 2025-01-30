@@ -50,6 +50,13 @@ input {
   border: 1px solid #ccc;
 }
 
+.buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 16px;
+}
+
 .reset-button {
   padding: 8px 16px;
   background-color: #f44336bc;
@@ -57,6 +64,23 @@ input {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #f64336;
+}
+
+.save-button {
+  padding: 8px 16px;
+  background-color: #40f57f94;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #18ef6394;
 }
 
 .progress-bar {
